@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace if_state_pract_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("How old are you?");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Do you have a License? yes or no: (use lower case)");
+            string license = Console.ReadLine();
+
+
+            if (license == "yes")
+            {
+                if (age >= 18)
+                { Console.WriteLine("You are allowed to drive.");
+                }
+                else
+                {
+                    Console.WriteLine("You are young, drive under supervision!");
+                }
+            } 
+            else if (license == "no")
+            {
+                if (age >= 18)
+                {
+                    Console.WriteLine("You are old enough but you need a license.");
+                }
+                else if (age <= 18)
+                {
+                    Console.WriteLine("You are not allowed to drive.");
+                }
+            } 
+
+              
+        }
+    }
+}
